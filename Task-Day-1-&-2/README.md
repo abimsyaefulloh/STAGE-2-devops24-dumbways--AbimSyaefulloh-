@@ -72,10 +72,14 @@ artinya memberikan akses kesemua database dan table.
 ```bash
 # Masuk ke MySQL, dan buat database wayshub menggunakan command
 CREATE DATABASE wayshub;
-# dan menampilkan database menggunakan  
+# Menampilkan semua database menggunakan  
 SHOW DATABASES;
-# untuk memilih direktori  
+# Memilih database yang mau dipakai
 USE wayshub;
+# Menghapus database
+DROP DATABASE wayshub;
+# Menerapkan perubahan
+FLUSH PRIVILEGES;
 ```
 
 
