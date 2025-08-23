@@ -81,7 +81,7 @@ DROP DATABASE wayshub;
 # Menerapkan perubahan
 FLUSH PRIVILEGES;
 ```
-
+![Fotoscr](scr/Foto-5-0.png)  
 
 ---
 
