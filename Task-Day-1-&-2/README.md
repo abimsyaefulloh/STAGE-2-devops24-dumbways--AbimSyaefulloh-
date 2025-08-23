@@ -52,6 +52,15 @@ Saya menggunakan MySQL untuk database.
 ```
 ![Fotoscr](scr/Foto-3-0.png)  
 
+lalu jalankan `sudo mysql` lagi dan masukan command  
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'dumbways';`  
+yang artinya
+```bash
+1. ALTER USER → mengubah metode login user root agar pakai password.
+2. caching_sha2_password → plugin autentikasi default dari MySQL 8.
+3. 'dumbways' → password yang saya gunakan untuk root.
+```
+
 ---
 
 ## Step 4. Konfigurasi Backend (Sequelize)  
