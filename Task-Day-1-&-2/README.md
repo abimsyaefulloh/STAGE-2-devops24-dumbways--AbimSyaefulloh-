@@ -66,7 +66,7 @@ yang artinya membuat user 'abim' yang nantinya bisa diakes manasaja menggunakan 
 artinya memberikan akses kesemua database dan table.  
 
 ### Masuk MySQL menggunakan user dan password.
-`sudo mysql -u abim -p`
+`sudo mysql -u abim -p`  
 ![Fotoscr](scr/Foto-4-0.png)  
 ### Membuat Database
 
