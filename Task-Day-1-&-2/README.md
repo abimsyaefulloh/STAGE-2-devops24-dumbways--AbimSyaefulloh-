@@ -32,7 +32,7 @@ mkdir -p ~/dumbways-app
 git clone https://github.com/dumbwaysdev/wayshub-backend
 git clone https://github.com/dumbwaysdev/wayshub-frontend
 ```
-![Fotoscr](scr/Foto-3-0.png)  
+![Fotoscr](scr/Foto-2-0.png)  
 
 ---
 
@@ -51,7 +51,7 @@ Saya menggunakan MySQL untuk database.
 4. Remove test database → menghapus database “test” default bawaan MySQL yang bisa diakses siapa aja.
 5. Reload privilege tables → menerapkan semua perubahan pengaturan keamanan tadi.
 ```
-![Fotoscr](scr/Foto-2-0.png)  
+![Fotoscr](scr/Foto-3-0.png)  
 
 ---
 
