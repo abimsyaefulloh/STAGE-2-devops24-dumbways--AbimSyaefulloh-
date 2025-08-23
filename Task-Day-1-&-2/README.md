@@ -7,7 +7,7 @@ Saya menggunakan **Ubuntu Server 22.04 LTS**, **MariaDB**, **PM2**, dan **Nginx*
 Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.  
 ```bash
 # Update paket 
-sudo apt update dan sudo apt -y upgrade
+sudo apt update 
 
 # Download dan install dari web browser Node.js LTS nya
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
