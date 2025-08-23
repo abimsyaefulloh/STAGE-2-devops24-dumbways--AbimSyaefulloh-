@@ -25,7 +25,19 @@ source ~/.bashrc`
 
 ---
 
-## Step 2. Database (MySQL)
+## Step 2. Meng-clone Repository  
+Saya meletakkan project di `~/dumbways-app`.  
+```bash
+mkdir -p ~/dumbways-app && cd ~/dumbways-app
+git clone https://github.com/dumbwaysdev/wayshub-backend
+git clone https://github.com/dumbwaysdev/wayshub-frontend
+ls -la
+```
+![Fotoscr](scr/Foto-3-0.png)  
+
+---
+
+## Step 3. Database (MySQL)
 Saya menggunakan MySQL untuk database.
 # Install dan menjalankan MySQL
 `sudo apt install mysql-server`  
@@ -41,18 +53,6 @@ Saya menggunakan MySQL untuk database.
 5. Reload privilege tables → menerapkan semua perubahan pengaturan keamanan tadi.
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
-
----
-
-## Step 3. Meng-clone Repository  
-Saya meletakkan project di `~/dumbways-app`.  
-```bash
-mkdir -p ~/dumbways-app && cd ~/dumbways-app
-git clone https://github.com/dumbwaysdev/wayshub-backend
-git clone https://github.com/dumbwaysdev/wayshub-frontend
-ls -la
-```
-![Fotoscr](scr/Foto-3-0.png)  
 
 ---
 
