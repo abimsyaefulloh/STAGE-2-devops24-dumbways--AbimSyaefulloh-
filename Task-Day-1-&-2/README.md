@@ -16,6 +16,7 @@ sudo apt update dan sudo apt -y upgrade
 sudo apt -y install git curl build-essential
 
 # nvm + Node.js LTS
+# install node di https://nodejs.org/en/download dan menjalankan commaand
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm install 12
