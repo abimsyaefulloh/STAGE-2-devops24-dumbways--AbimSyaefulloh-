@@ -5,22 +5,22 @@ Saya menggunakan **Ubuntu Server 22.04 LTS**, **MariaDB**, **PM2**, dan **Nginx*
 
 ## Step 1. Menyiapkan Sistem  
 Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.  
-```bash
-# Update paket 
-sudo apt update 
 
-# Download dan install dari web browser Node.js LTS nya
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.bashrc
+### Update paket 
+`sudo apt update` 
 
-# Memilih versi node dan mengecek versinya
-nvm install 12
-nvm use 12
-node -v dan npm -v
+### Download dan install dari web browser Node.js LTS nya
+`curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc`
 
-# Install PM2
-npm i -g pm2
-```
+### Memilih versi node dan mengecek versinya
+`nvm install 12`  
+`nvm use 12`  
+`node -v dan npm -v`  
+
+### Install PM2
+`npm i -g pm2`  
+
 ![Fotoscr](scr/Foto-1-0.png)  
 
 ---
@@ -33,6 +33,7 @@ sudo apt install mysql-server
 sudo mysql
 
 # Mengatur password dan autentikasi user root di MySQL
+
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
 
