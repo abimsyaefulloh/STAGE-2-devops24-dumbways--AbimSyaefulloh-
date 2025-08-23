@@ -1,12 +1,6 @@
 # Deploy Wayshub (Task Day 1 & 2)  
 Pada tugas ini saya melakukan deploy aplikasi Wayshub dengan backend dan frontend berjalan pada satu server.  
 Saya menggunakan **Ubuntu Server 22.04 LTS**, **MariaDB**, **PM2**, dan **Nginx** sebagai reverse proxy.  
-
-## Tujuan  
-1. Backend dan Frontend berjalan.  
-2. Data tersimpan pada database SQL (saya menggunakan MariaDB).  
-3. Proses backend dikelola oleh PM2.  
-
 ---
 
 ## Step 1. Menyiapkan Sistem  
