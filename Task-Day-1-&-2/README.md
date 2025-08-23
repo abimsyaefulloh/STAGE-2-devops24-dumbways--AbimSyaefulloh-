@@ -38,11 +38,11 @@ git clone https://github.com/dumbwaysdev/wayshub-frontend
 
 ## Step 3. Database (MySQL)
 Saya menggunakan MySQL untuk database.
-# Install dan menjalankan MySQL
+### Install dan menjalankan MySQL
 `sudo apt install mysql-server`  
 `sudo mysql`
 
-# Mengatur password dan autentikasi user root di MySQL
+### Mengatur password dan autentikasi user root di MySQL
 `sudo mysql_secure_installation` yang isinya
 ```bash
 1. Set root password → kalau belum ada password untuk user root, bisa diatur di sini.
