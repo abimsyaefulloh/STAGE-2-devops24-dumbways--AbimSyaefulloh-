@@ -89,7 +89,29 @@ FLUSH PRIVILEGES;
 Masuk ke folder backend buka file package.json untuk mengatur dibagian development dan atur username dan password.  
 `~/dumbways-app/wayshub-backend/config$ nano config.json`  
 ![Fotoscr](scr/Foto-6-0.png)  
-
+### Menjalankan sequelize
+```bash
+# pastikan menggunakan versi node yang sama dengan websitenya
+nvm use 12
+# jalankan sequelize
+sequelize
+# install sequelize-cli
+npm i -g sequelize-cli
+```
+![Fotoscr](scr/Foto-7-0.png) 
+```bash
+# sequelize db:create
+Membuat database kosong sesuai nama yang sudah ditulis di .env atau config/config.json (contoh: wayshub).
+Jadi nggak perlu bikin database manual di MySQL pakai CREATE DATABASE.
+# sequelize db:migrate
+Menjalankan semua file migration yang ada di folder migrations/.
+Migration berisi definisi tabel (misal tabel users, videos, comments) beserta kolom dan tipe datanya.
+Jadi command ini yang bikin struktur tabel di dalam database.
+# sequelize db:seed:all
+Menjalankan semua file seeders di folder seeders/.
+Seeder berisi data awal (contoh: akun admin default, dummy data user, kategori).
+Jadi setelah jalan, database yang tadinya kosong akan terisi data bawaan.
+```
 ---
 
 ## Step 5. Konfigurasi Frontend (Build)  
@@ -97,7 +119,7 @@ Masuk ke folder frontend, install dependency, dan atur baseURL API agar melalui 
 ```bash
 cd ~/dumbways-app/wayshub-frontend
 npm install
-```
+```bash
 Edit `src/config/api.js`:  
 ```js
 import axios from 'axios';
