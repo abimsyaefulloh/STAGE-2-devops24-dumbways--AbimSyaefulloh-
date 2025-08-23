@@ -27,13 +27,18 @@ source ~/.bashrc`
 
 ## Step 2. Database (MySQL)
 Saya menggunakan MySQL untuk database.
-```bash
 # Install dan menjalankan MySQL
-sudo apt install mysql-server
-sudo mysql
+`sudo apt install mysql-server`  
+`sudo mysql`
 
 # Mengatur password dan autentikasi user root di MySQL
-
+`sudo mysql_secure_installation`
+```bash
+1. Set root password → kalau belum ada password untuk user root, bisa diatur di sini.
+2. Remove anonymous users → menghapus user anonim (tanpa nama) supaya orang asing nggak bisa akses Database.
+3. Disallow root login remotely → menonaktifkan akses root dari luar server, biar root hanya bisa login dari localhost.
+4. Remove test database → menghapus database “test” default bawaan MySQL yang bisa diakses siapa aja.
+5. Reload privilege tables → menerapkan semua perubahan pengaturan keamanan tadi.
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
 
