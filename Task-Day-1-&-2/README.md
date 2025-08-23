@@ -69,13 +69,14 @@ artinya memberikan akses kesemua database dan table.
 `sudo mysql -u abim -p`  
 ![Fotoscr](scr/Foto-4-0.png)  
 ### Membuat Database
-Masuk ke MySQL, dan buat database wayshub menggunakan command  
-`CREATE DATABASE wayshub;`  
-dan menampilkan database menggunakan  
-`SHOW DATABASES;`  
-untuk memilih direktori  
-`USE wayshub;`  
-
+```bash
+# Masuk ke MySQL, dan buat database wayshub menggunakan command
+CREATE DATABASE wayshub;
+# dan menampilkan database menggunakan  
+SHOW DATABASES;
+# untuk memilih direktori  
+USE wayshub;
+```
 
 
 ---
