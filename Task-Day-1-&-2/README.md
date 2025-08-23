@@ -12,6 +12,7 @@ Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.
 ### Download dan install dari web browser Node.js LTS nya
 `curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc`
+![Fotoscr](scr/Foto-0-0.png)  
 
 ### Memilih versi node dan mengecek versinya
 `nvm install 12`  
