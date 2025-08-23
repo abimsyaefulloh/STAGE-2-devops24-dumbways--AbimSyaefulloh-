@@ -31,19 +31,11 @@ npm i -g pm2
 
 ---
 
-## Step 2. Menginstal Database (MariaDB)  
-Install dan amankan MariaDB, lalu buat database dan user untuk aplikasi.  
+## Step 2. Database (MySQL)
+Saya menggunakan MySQL untuk database.
 ```bash
-sudo apt -y install mariadb-server
-sudo systemctl enable --now mariadb
-sudo mysql_secure_installation
-```
-Masuk MariaDB dan jalankan SQL berikut:  
-```sql
-CREATE DATABASE wayshub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'wayshub'@'localhost' IDENTIFIED BY 'passwordku-aman';
-GRANT ALL PRIVILEGES ON wayshub.* TO 'wayshub'@'localhost';
-FLUSH PRIVILEGES;
+# Install mysql
+sudo apt install mysql-server
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
 
