@@ -54,12 +54,20 @@ Saya menggunakan MySQL untuk database.
 
 lalu jalankan `sudo mysql` lagi dan masukan command  
 `ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'dumbways';`  
-yang artinya
+yang artinya untuk mengubah metode login user root agar pakai password.
 ```bash
-1. ALTER USER → mengubah metode login user root agar pakai password.
+1. ALTER USER → perintah untuk merubah/mengedit akun user di MySQL.
 2. caching_sha2_password → plugin autentikasi default dari MySQL 8.
 3. 'dumbways' → password yang saya gunakan untuk root.
 ```
+`CREATE USER 'abim'@'%' IDENTIFIED BY 'dumbways';`  
+yang artinya membuat user 'abim' yang nantinya bisa diakes manasaja menggunakan passowrd dumbways.  
+`GRANT ALL PRIVIVEGES ON *.* TO 'abim'@'%';`  
+artinya memberikan akses kesemua database dan table.  
+
+### Masuk MySQL menggunakan user dan password.
+`sudo mysql -u abim -p
+![Fotoscr](scr/Foto-4-0.png)  
 
 ---
 
