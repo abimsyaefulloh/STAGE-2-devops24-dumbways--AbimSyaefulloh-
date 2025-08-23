@@ -32,7 +32,7 @@ Saya menggunakan MySQL untuk database.
 `sudo mysql`
 
 # Mengatur password dan autentikasi user root di MySQL
-`sudo mysql_secure_installation`
+`sudo mysql_secure_installation` yang isinya
 ```bash
 1. Set root password → kalau belum ada password untuk user root, bisa diatur di sini.
 2. Remove anonymous users → menghapus user anonim (tanpa nama) supaya orang asing nggak bisa akses Database.
