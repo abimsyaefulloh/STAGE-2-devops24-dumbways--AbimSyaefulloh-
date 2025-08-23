@@ -86,35 +86,9 @@ FLUSH PRIVILEGES;
 ---
 
 ## Step 4. Konfigurasi Backend (Sequelize)  
-Masuk ke folder backend dan install dependency.  
-```bash
-cd ~/dumbways-app/wayshub-backend
-npm install
-```
-Buat file `.env` jika belum ada:  
-```env
-PORT=5000
-DB_USERNAME=wayshub
-DB_PASSWORD=passwordku-aman
-DB_DATABASE=wayshub
-DB_HOST=127.0.0.1
-DB_DIALECT=mysql
-JWT_SECRET=supersecretkey
-```
-Pastikan `config/config.json` sesuai dengan kredensial di atas (dialect `mysql`).  
-
-Jalankan database init, migrasi, dan seed (jika tersedia):  
-```bash
-npx sequelize db:create
-npx sequelize db:migrate
-npx sequelize db:seed:all
-```
-Tes backend (opsional):  
-```bash
-npm start
-curl http://localhost:5000/api/v1/health
-```
-![Fotoscr](scr/Foto-4-0.png)  
+Masuk ke folder backend buka file package.json untuk mengatur dibagian development dan atur username dan password.  
+`~/dumbways-app/wayshub-backend/config$ nano config.json`  
+![Fotoscr](scr/Foto-6-0.png)  
 
 ---
 
