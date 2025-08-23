@@ -22,7 +22,7 @@ source ~/.bashrc
 # Memilih versi node dan mengecek versinya
 nvm install 12
 nvm use 12
-node -v && npm -v
+node -v dan npm -v
 
 # Install PM2
 npm i -g pm2
