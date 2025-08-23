@@ -12,17 +12,19 @@ Saya menggunakan **Ubuntu Server 22.04 LTS**, **MariaDB**, **PM2**, dan **Nginx*
 ## Step 1. Menyiapkan Sistem  
 Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.  
 ```bash
-sudo apt update && sudo apt -y upgrade
-sudo apt -y install git curl build-essential
+# Update paket 
+sudo apt update dan sudo apt -y upgrade
 
-# nvm + Node.js LTS
+# Download dan install dari web browser Node.js LTS nya
 curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
-nvm install 18
-nvm use 18
+
+# Memilih versi node dan mengecek versinya
+nvm install 12
+nvm use 12
 node -v && npm -v
 
-# PM2
+# Install PM2
 npm i -g pm2
 ```
 ![Fotoscr](scr/Foto-1-0.png)  
