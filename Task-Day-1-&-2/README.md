@@ -34,8 +34,11 @@ npm i -g pm2
 ## Step 2. Database (MySQL)
 Saya menggunakan MySQL untuk database.
 ```bash
-# Install mysql
+# Install dan menjalankan MySQL
 sudo apt install mysql-server
+sudo mysql
+
+# Mengatur password dan autentikasi user root di MySQL
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
 
