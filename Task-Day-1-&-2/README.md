@@ -28,10 +28,9 @@ source ~/.bashrc`
 ## Step 2. Meng-clone Repository  
 Saya meletakkan project di `~/dumbways-app`.  
 ```bash
-mkdir -p ~/dumbways-app && cd ~/dumbways-app
+mkdir -p ~/dumbways-app 
 git clone https://github.com/dumbwaysdev/wayshub-backend
 git clone https://github.com/dumbwaysdev/wayshub-frontend
-ls -la
 ```
 ![Fotoscr](scr/Foto-3-0.png)  
 
