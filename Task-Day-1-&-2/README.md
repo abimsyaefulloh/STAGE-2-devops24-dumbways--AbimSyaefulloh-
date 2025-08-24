@@ -221,7 +221,7 @@ sudo mysql -u abim -p
 SHOW DATABASES;
 
 # Memilih databases
-USE wayshub
+USE wayshub;
 
 # Melihat table dari database yang dipilih
 SELECT * FROM Chanels;
