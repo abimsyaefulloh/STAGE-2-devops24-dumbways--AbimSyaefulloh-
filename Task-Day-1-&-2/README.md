@@ -230,13 +230,5 @@ SELECT * FROM Chanels;
 
 ---
 
-## Catatan  
-- Jika ada error **OpenSSL** saat jalankan React dev server, gunakan:  
-  `export NODE_OPTIONS=--openssl-legacy-provider`  
-- Jika API 404/CORS, pastikan `baseURL="/api/v1"` di frontend dan blok `location /api/` pada Nginx sudah benar, lalu reload Nginx.  
-- Jika Sequelize gagal konek, periksa `.env` dan `config/config.json`, lalu ulang migrasi.  
-
----
-
 ## Kesimpulan  
-Dengan langkah di atas, aplikasi Wayshub berhasil berjalan (frontend + backend), data tersimpan di MariaDB, dan backend dikelola oleh PM2.  
+Dengan langkah di atas, aplikasi Wayshub berhasil berjalan (frontend + backend), data tersimpan di MySQL Database, dan website berjalan di PM2.  
