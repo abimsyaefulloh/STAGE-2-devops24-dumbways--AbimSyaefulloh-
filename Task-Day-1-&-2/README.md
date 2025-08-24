@@ -142,7 +142,7 @@ untuk mengatur alamat server backend, contoh :
 1. http://localhost:5000/api/v1
 2. http://api.mentor.studentdumbways.my.id/api/v1
 ```
-![Fotoscr](scr/Foto-5-0.png)  
+![Fotoscr](scr/Foto-8-0.png)  
 
 ---
 
@@ -155,7 +155,7 @@ sudo ln -s /etc/nginx/sites-available/wayshub /etc/nginx/sites-enabled/wayshub
 sudo nginx -t
 sudo systemctl reload nginx
 ```
-![Fotoscr](scr/Foto-6-0.png)  
+![Fotoscr](scr/Foto-9-0.png)  
 
 ---
 
@@ -194,7 +194,7 @@ Ringkasan perintah PM2 yang saya gunakan:
 3. List: `pm2 list`  
 4. Logs: `pm2 logs wayshub-backend`  
 5. Delete: `pm2 delete wayshub-backend`  
-![Fotoscr](scr/Foto-7-0.png)  
+![Fotoscr](scr/Foto-10-0.png)  
 
 ---
 
@@ -206,7 +206,7 @@ sudo ufw allow 80
 sudo ufw enable
 sudo ufw status
 ```
-![Fotoscr](scr/Foto-8-0.png)  
+![Fotoscr](scr/Foto-11-0.png)  
 
 ---
 
@@ -222,7 +222,7 @@ pm2 logs wayshub-backend --lines 200
 sudo mysql -u root -p -e "USE wayshub; SHOW TABLES; SELECT * FROM users LIMIT 5;"
 ```
 Jika data user muncul, berarti **berhasil**.  
-![Fotoscr](scr/Foto-9-0.png)  
+![Fotoscr](scr/Foto-12-0.png)  
 
 ---
 
