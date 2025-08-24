@@ -151,8 +151,16 @@ Install dan konfigurasi Nginx untuk melayani file statis frontend dan mem-proxy 
 
 Aktifkan site dan reload Nginx:  
 ```bash
+# Menjalankan Nginx
+sudo systemctl start nginx
+
+# Menjalankan configurasi tertentu
 sudo ln -s /etc/nginx/sites-available/wayshub /etc/nginx/sites-enabled/wayshub
+
+# mengecek configurasi apakah benar
 sudo nginx -t
+
+# restart nginx kalau ada perubahan
 sudo systemctl reload nginx
 ```
 ![Fotoscr](scr/Foto-9-0.png)  
