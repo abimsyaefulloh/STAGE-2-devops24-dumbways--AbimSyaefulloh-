@@ -203,7 +203,7 @@ sudo ufw status
 ---
 
 ## Step 9. Pengujian  
-###Buka alamat server (`http://IP_SERVER`) di browser.  
+### Buka alamat server (`http://IP_SERVER`) di browser.  
 1. Frontend `http://103.196.152.65:3000/login`
   ![Fotoscr](scr/Foto-12-0.png)  
 2. Backend `http://103.196.152.65:5000`
@@ -212,16 +212,12 @@ sudo ufw status
   ![Fotoscr](scr/Foto-14-0.png)  
   ![Fotoscr](scr/Foto-15-0.png)
   ![Fotoscr](scr/Foto-16-0.png)  
-### Cek log backend:  
+### Cek pada database  
 ```bash
-pm2 logs wayshub-backend --lines 200
-```
-3. Cek data pada database:  
-```bash
-sudo mysql -u root -p -e "USE wayshub; SHOW TABLES; SELECT * FROM users LIMIT 5;"
+sudo mysql -u abim -p -e "USE wayshub; SHOW TABLES; SELECT * FROM users LIMIT 5;"
 ```
 Jika data user muncul, berarti **berhasil**.  
-![Fotoscr](scr/Foto-12-0.png)  
+![Fotoscr](scr/Foto-17-0.png)  
 
 ---
 
