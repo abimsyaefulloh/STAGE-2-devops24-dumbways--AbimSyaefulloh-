@@ -214,9 +214,18 @@ sudo ufw status
   ![Fotoscr](scr/Foto-16-0.png)  
 ### Cek pada database  
 ```bash
-sudo mysql -u abim -p -e "USE wayshub; SHOW TABLES; SELECT * FROM users LIMIT 5;"
+# Membuka mysql menggunakan username dan password
+sudo mysql -u abim -p
+
+# Melihat databases
+SHOW DATABASES;
+
+# Memilih databases
+USE wayshub
+
+# Melihat table dari database yang dipilih
+SELECT * FROM Chanels;
 ```
-Jika data user muncul, berarti **berhasil**.  
 ![Fotoscr](scr/Foto-17-0.png)  
 
 ---
