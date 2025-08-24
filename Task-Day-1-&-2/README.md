@@ -154,8 +154,14 @@ Aktifkan site dan reload Nginx:
 # Menjalankan Nginx
 sudo systemctl start nginx
 
-# Menjalankan configurasi tertentu
-sudo ln -s /etc/nginx/sites-available/wayshub /etc/nginx/sites-enabled/wayshub
+# Menjalankan atau membuat configurasi tertentu
+-s /etc/nginx/sites-enabled$ sudo nano wayshub.conf
+disini kitaa bisa mengatur contoh: 
+- Reverse Proxy, contoh mengatur request /api untuk diarahkan ke backend
+- Menambahkan domain
+- Load Balancing, kalau ada beberapa backend
+
+# Tapi disini saya tidak membuat atau merubah configurasi apapun yang ada di nginx, hanya sekedar menjalankan nginx saja 
 
 # mengecek configurasi apakah benar
 sudo nginx -t
