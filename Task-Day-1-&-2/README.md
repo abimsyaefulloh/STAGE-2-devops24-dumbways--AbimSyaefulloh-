@@ -167,42 +167,24 @@ sudo systemctl reload nginx
 
 ---
 
-## Step 7. Menjalankan Backend dengan PM2  
-Saya menggunakan PM2 untuk menjaga backend tetap berjalan di background.  
-Buat file `ecosystem.config.js` di `~/dumbways-app`:  
-```js
-module.exports = {{
-  apps: [
-    {{
-      name: "wayshub-backend",
-      cwd: "./wayshub-backend",
-      script: "npm",
-      args: "start",
-      env: {{
-        NODE_ENV: "production",
-        PORT: "5000"
-      }},
-      watch: false
-    }}
-  ]
-}}
-```
-Jalankan dan simpan proses PM2:  
+## Step 7. Menjalankan PM2  
+Saya menggunakan PM2 untuk menjaga program tetap berjalan di background.  
 ```bash
-cd ~/dumbways-app
-pm2 start ecosystem.config.js
-pm2 save
-pm2 startup
+# Jalankan Backend
+cd wayshub-Backend
+pm2 start index.js --name wayshub-backend
+
+# Jalankan Frontend
+cd wayshub-frontend
+pm2 start "npm start" --name wayshub-frontend
+
+# Cek semua proses
 pm2 ls
-pm2 logs wayshub-backend --lines 100
+
+# Cek prosesnya normal atau error
+pm2 logs
 ```
-Ringkasan perintah PM2 yang saya gunakan:  
-1. Start: `pm2 start ecosystem.config.js --only wayshub-backend`  
-2. Restart: `pm2 restart wayshub-backend`  
-3. List: `pm2 list`  
-4. Logs: `pm2 logs wayshub-backend`  
-5. Delete: `pm2 delete wayshub-backend`  
-![Fotoscr](scr/Foto-10-0.png)  
+![Fotoscr](scr/Foto-10-0.png)   
 
 ---
 
@@ -211,6 +193,8 @@ Saya membuka port yang diperlukan (SSH dan HTTP).
 ```bash
 sudo ufw allow 22
 sudo ufw allow 80
+sudo ufw allow 3000
+sudo ufw allow 5000
 sudo ufw enable
 sudo ufw status
 ```
