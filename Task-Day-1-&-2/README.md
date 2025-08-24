@@ -27,8 +27,10 @@ Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.
 ## Step 2. Meng-clone Repository  
 Saya meletakkan project di `~/dumbways-app`.  
 ```bash
-mkdir -p ~/dumbways-app 
+mkdir -p ~/dumbways-app
+
 git clone https://github.com/dumbwaysdev/wayshub-backend
+
 git clone https://github.com/dumbwaysdev/wayshub-frontend
 ```
 ![Fotoscr](scr/Foto-2-0.png)  
@@ -45,9 +47,13 @@ Saya menggunakan MySQL untuk database.
 `sudo mysql_secure_installation` yang isinya
 ```bash
 1. Set root password → kalau belum ada password untuk user root, bisa diatur di sini.
+
 2. Remove anonymous users → menghapus user anonim (tanpa nama) supaya orang asing nggak bisa akses Database.
+
 3. Disallow root login remotely → menonaktifkan akses root dari luar server, biar root hanya bisa login dari localhost.
+
 4. Remove test database → menghapus database “test” default bawaan MySQL yang bisa diakses siapa aja.
+
 5. Reload privilege tables → menerapkan semua perubahan pengaturan keamanan tadi.
 ```
 ![Fotoscr](scr/Foto-3-0.png)  
@@ -57,7 +63,9 @@ lalu jalankan `sudo mysql` lagi dan masukan command
 yang artinya untuk mengubah metode login user root agar pakai password.
 ```bash
 1. ALTER USER → perintah untuk merubah/mengedit akun user di MySQL.
+
 2. caching_sha2_password → plugin autentikasi default dari MySQL 8.
+
 3. 'dumbways' → password yang saya gunakan untuk root.
 ```
 `CREATE USER 'abim'@'%' IDENTIFIED BY 'dumbways';`  
@@ -72,12 +80,16 @@ artinya memberikan akses kesemua database dan table.
 ```bash
 # Masuk ke MySQL, dan buat database wayshub menggunakan command
 CREATE DATABASE wayshub;
+
 # Menampilkan semua database menggunakan  
 SHOW DATABASES;
+
 # Memilih database yang mau dipakai
 USE wayshub;
+
 # Menghapus database
 DROP DATABASE wayshub;
+
 # Menerapkan perubahan
 FLUSH PRIVILEGES;
 ```
@@ -93,8 +105,10 @@ Masuk ke folder backend buka file package.json untuk mengatur dibagian developme
 ```bash
 # pastikan menggunakan versi node yang sama dengan websitenya
 nvm use 12
+
 # jalankan sequelize
 sequelize
+
 # install sequelize-cli
 npm i -g sequelize-cli
 ```
@@ -103,10 +117,12 @@ npm i -g sequelize-cli
 # sequelize db:create
 Membuat database kosong sesuai nama yang sudah ditulis di .env atau config/config.json (contoh: wayshub).
 Jadi nggak perlu bikin database manual di MySQL pakai CREATE DATABASE.
+
 # sequelize db:migrate
 Menjalankan semua file migration yang ada di folder migrations/.
 Migration berisi definisi tabel (misal tabel users, videos, comments) beserta kolom dan tipe datanya.
 Jadi command ini yang bikin struktur tabel di dalam database.
+
 # sequelize db:seed:all
 Menjalankan semua file seeders di folder seeders/.
 Seeder berisi data awal (contoh: akun admin default, dummy data user, kategori).
@@ -117,54 +133,22 @@ Jadi setelah jalan, database yang tadinya kosong akan terisi data bawaan.
 ## Step 5. Konfigurasi Frontend (Build)  
 Masuk ke folder frontend, install dependency, dan atur baseURL API agar melalui Nginx path `/api`.  
 ```bash
-cd ~/dumbways-app/wayshub-frontend
+# Install dependency
 npm install
-```bash
-Edit `src/config/api.js`:  
-```js
-import axios from 'axios';
-const API = axios.create({{ baseURL: "/api/v1" }});
-export {{ API }};
+
+# Membuka file Api.js 
+~/dumbways-app/wayshub-frontend/src/config$ nano Api.js
+untuk mengatur alamat server backend, contoh :
+1. http://localhost:5000/api/v1
+2. http://api.mentor.studentdumbways.my.id/api/v1
 ```
-Build React:  
-```bash
-npm run build
-```
-Hasil build akan berada di `wayshub-frontend/build`.  
 ![Fotoscr](scr/Foto-5-0.png)  
 
 ---
 
 ## Step 6. Nginx Reverse Proxy  
 Install dan konfigurasi Nginx untuk melayani file statis frontend dan mem-proxy API ke backend.  
-```bash
-sudo apt -y install nginx
-sudo systemctl enable --now nginx
-```
-Buat file `/etc/nginx/sites-available/wayshub`:  
-```nginx
-server {{
-    listen 80;
-    server_name _;
 
-    root /home/ubuntu/dumbways-app/wayshub-frontend/build;
-    index index.html;
-
-    location /api/ {{
-        proxy_pass http://127.0.0.1:5000/api/;
-        proxy_http_version 1.1;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Host $host;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-    }}
-
-    location / {{
-        try_files $uri /index.html;
-    }}
-}}
-```
 Aktifkan site dan reload Nginx:  
 ```bash
 sudo ln -s /etc/nginx/sites-available/wayshub /etc/nginx/sites-enabled/wayshub
