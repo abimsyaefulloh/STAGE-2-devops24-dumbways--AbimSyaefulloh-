@@ -204,8 +204,13 @@ sudo ufw status
 
 ## Step 9. Pengujian  
 Buka alamat server (`http://IP_SERVER`) di browser.  
-1. Register user baru dan login.  
-2. Cek log backend:  
+![Fotoscr](scr/Foto-12-0.png)  
+![Fotoscr](scr/Foto-13-0.png)  
+1. Register user baru dan login.
+  ![Fotoscr](scr/Foto-14-0.png)  
+  ![Fotoscr](scr/Foto-15-0.png)
+  ![Fotoscr](scr/Foto-16-0.png)  
+3. Cek log backend:  
 ```bash
 pm2 logs wayshub-backend --lines 200
 ```
