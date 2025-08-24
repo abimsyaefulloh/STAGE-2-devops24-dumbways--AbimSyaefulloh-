@@ -204,9 +204,11 @@ sudo ufw status
 
 ## Step 9. Pengujian  
 Buka alamat server (`http://IP_SERVER`) di browser.  
-![Fotoscr](scr/Foto-12-0.png)  
-![Fotoscr](scr/Foto-13-0.png)  
-1. Register user baru dan login.
+1. Frontend `http://103.196.152.65:3000/login`
+  ![Fotoscr](scr/Foto-12-0.png)  
+2. Backend `http://103.196.152.65:5000`
+  ![Fotoscr](scr/Foto-13-0.png)  
+Register user baru dan login.
   ![Fotoscr](scr/Foto-14-0.png)  
   ![Fotoscr](scr/Foto-15-0.png)
   ![Fotoscr](scr/Foto-16-0.png)  
