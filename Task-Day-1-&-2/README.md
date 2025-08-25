@@ -17,10 +17,10 @@ Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.
 `nvm use 12`  
 `node -v dan npm -v`  
 
+![Fotoscr](scr/Foto-1-0.png)  
+
 ### Install PM2
 `npm i -g pm2`  
-
-![Fotoscr](scr/Foto-1-0.png)  
 
 ---
 
