@@ -27,7 +27,7 @@ Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.
 ## Step 2. Meng-clone Repository  
 Saya meletakkan project di `~/dumbways-app`.  
 ```bash
-mkdir -p ~/dumbways-app
+mkdir dumbways-app
 
 git clone https://github.com/dumbwaysdev/wayshub-backend
 
