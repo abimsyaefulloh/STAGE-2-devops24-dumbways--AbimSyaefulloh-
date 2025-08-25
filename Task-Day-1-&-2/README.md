@@ -124,7 +124,7 @@ Jadi nggak perlu bikin database manual di MySQL pakai CREATE DATABASE.
 # sequelize db:migrate
 Menjalankan semua file migration yang ada di folder migrations/.
 Migration berisi definisi tabel (misal tabel users, videos, comments) beserta kolom dan tipe datanya.
-Jadi command ini yang bikin struktur tabel di dalam database.
+membuat struktur tabel di dalam database.
 ```
 ---
 
