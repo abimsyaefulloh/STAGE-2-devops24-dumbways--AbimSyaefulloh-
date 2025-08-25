@@ -88,7 +88,7 @@ SHOW DATABASES;
 USE wayshub;
 
 # Melihat Table
-SHOW TABLE;
+SHOW TABLES;
 
 # Menghapus database
 DROP DATABASE wayshub;
