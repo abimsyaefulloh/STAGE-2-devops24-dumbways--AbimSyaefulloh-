@@ -87,6 +87,9 @@ SHOW DATABASES;
 # Memilih database yang mau dipakai
 USE wayshub;
 
+# Melihat Table
+SHOW TABLE;
+
 # Menghapus database
 DROP DATABASE wayshub;
 
@@ -122,11 +125,6 @@ Jadi nggak perlu bikin database manual di MySQL pakai CREATE DATABASE.
 Menjalankan semua file migration yang ada di folder migrations/.
 Migration berisi definisi tabel (misal tabel users, videos, comments) beserta kolom dan tipe datanya.
 Jadi command ini yang bikin struktur tabel di dalam database.
-
-# sequelize db:seed:all
-Menjalankan semua file seeders di folder seeders/.
-Seeder berisi data awal (contoh: akun admin default, dummy data user, kategori).
-Jadi setelah jalan, database yang tadinya kosong akan terisi data bawaan.
 ```
 ---
 
