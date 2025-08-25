@@ -144,10 +144,10 @@ untuk mengatur alamat server backend, contoh :
 
 ---
 
-## Step 6. Nginx Reverse Proxy  
-Install dan konfigurasi Nginx untuk melayani file statis frontend dan mem-proxy API ke backend.  
+## Step 6. Nginx 
+Install dan konfigurasi Nginx 
 
-Aktifkan site dan reload Nginx:  
+Aktifkan Nginx:  
 ```bash
 # Menjalankan Nginx
 sudo systemctl start nginx
