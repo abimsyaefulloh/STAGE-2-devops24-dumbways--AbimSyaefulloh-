@@ -8,7 +8,8 @@ Update paket, install tool dasar, Node.js LTS (via nvm), dan PM2.
 ### Update paket 
 `sudo apt update` 
 
-### Download dan install dari web browser Node.js LTS nya
+### Download dan install dari web browser Node.js LTS nya  
+`https://nodejs.org/en/download`
 ![Fotoscr](scr/Foto-0-0.png)  
 
 ### Memilih versi node dan mengecek versinya
