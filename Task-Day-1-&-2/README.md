@@ -1,5 +1,5 @@
 # Deploy Wayshub (Task Day 1 & 2)  
-Pada tugas ini saya melakukan deploy aplikasi Wayshub dengan backend dan frontend berjalan pada satu server.  
+Pada tugas ini saya melakukan deploy aplikasi/website Wayshub dengan backend dan frontend berjalan pada satu server.  
 ---
 
 ## Step 1. Menyiapkan Sistem  
