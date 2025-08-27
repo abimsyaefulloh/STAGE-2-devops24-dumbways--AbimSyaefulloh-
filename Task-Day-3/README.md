@@ -1,32 +1,124 @@
-```bash
-Sebelum mengerjakan tugas, mohon persiapkan :
-- Akun Github dan buat repository dengan judul "devops24-dumbways-<nama kalian>"
-- Gunakan file README.md untuk isi tugas kalian
-- Buatlah langkah-langkah pengerjaan tugas beserta dokumentasinya
+# devops24-dumbways-`<nama-kalian>`{=html}
 
-Gunakan vm Appserver kalian diskusikan saja ingin menggunakan vm siapa di dalam team.
+## Ringkasan
 
-Repository & Reference:
-[Wayshub Backend](https://github.com/dumbwaysdev/wayshub-backend)
-[Wayshub Frontend](https://github.com/dumbwaysdev/wayshub-frontend)
-[Certbot](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
-[PM2 Runtime With Docker](https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs)
-[Cloudflare](https://dash.cloudflare.com/0d0e2eb306a3b985375cf565cb4ce3fc/studentdumbways.my.id/dns/records)
+Implementasi tugas Minggu 2: deploy Wayshub (frontend, backend,
+database) di atas Docker Compose dengan reverse-proxy Nginx, SSL
+wildcard (Cloudflare OFF), custom network, dan push image ke registry.
 
+## Arsitektur
 
-Tasks :
-[ Docker ]
-- Rebuild ulang server BiznetGio kalian, lalu gunakan username "dumbways" yang kalian gunakan bersama,
-  pastikan menggunakan login melalui ssh-key dan bukan password. (1 key untuk semua akan menjadi bonus) 
-- Deploy aplikasi Web Server, Frontend, Backend, serta Database on top `docker compose`
-  - Di dalam docker-compose file buat suatu custom network dengan nama **team kalian**,
-    lalu pasang ke setiap service yang kalian miliki. (Nilai Bonus)
-  - Untuk Web Server buatlah configurasi reverse-proxy menggunakan nginx on top docker.
-    - **SSL CLOUDFLARE OFF!!!**
-    - SSL sebisa mungkin gunakan wildcard
-    - Untuk DNS bisa sesuaikan seperti contoh di bawah ini
-      - Frontend team.studentdumbways.my.id
-      - Backend api.team.studentdumbways.my.id
-  - Push image ke docker registry kalian masing".
-- Aplikasi dapat berjalan dengan sesuai seperti melakukan login/register.
+-   reverse-proxy (Nginx, HTTPS) → frontend (static) & backend (Node.js)
+-   database (Postgres/MySQL) → diakses backend
+-   custom network: `<nama-tim>-net`
+
+## Prasyarat
+
+-   VM Appserver (Ubuntu), user `dumbways` (SSH key-only)
+-   Docker & Docker Compose
+-   Cloudflare DNS (DNS only)
+-   Let's Encrypt wildcard cert
+
+## Checklist Deliverables
+
+-   [ ] Rebuild VM (hostname/IP, OS, screenshot)
+-   [ ] User `dumbways` + SSH key-only login
+-   [ ] Docker & Compose terinstal
+-   [ ] DNS Cloudflare (DNS only)
+-   [ ] Wildcard SSL aktif
+-   [ ] Compose dengan custom network
+-   [ ] Nginx reverse-proxy ke FE/BE (HTTPS)
+-   [ ] Aplikasi bisa register/login
+-   [ ] Image dipush ke registry
+
+## Langkah Singkat
+
+1.  Rebuild VM, buat user & ssh key-only
+2.  Install Docker & Compose
+3.  Konfigurasi DNS (team & api)
+4.  Ambil wildcard cert (DNS-01)
+5.  Build image frontend/backend
+6.  Setup Nginx reverse-proxy + TLS
+7.  Jalankan `docker compose up -d --build`
+8.  Uji aplikasi & DB
+9.  Push image ke registry
+
+## Konfigurasi
+
+### Contoh `nginx.conf`
+
+``` nginx
+server {
+    listen 80;
+    server_name team.studentdumbways.my.id api.team.studentdumbways.my.id;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name team.studentdumbways.my.id;
+
+    ssl_certificate /etc/letsencrypt/live/team.studentdumbways.my.id/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/team.studentdumbways.my.id/privkey.pem;
+
+    location / {
+        proxy_pass http://frontend:3000;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    server_name api.team.studentdumbways.my.id;
+
+    ssl_certificate /etc/letsencrypt/live/team.studentdumbways.my.id/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/team.studentdumbways.my.id/privkey.pem;
+
+    location / {
+        proxy_pass http://backend:5000;
+    }
+}
+```
+
+### Contoh `compose.yml`
+
+``` yaml
+services:
+  reverse-proxy:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./reverse-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - team-net
+
+  frontend:
+    build: ./frontend
+    expose:
+      - "3000"
+    networks:
+      - team-net
+
+  backend:
+    build: ./backend
+    expose:
+      - "5000"
+    networks:
+      - team-net
+
+  db:
+    image: postgres:15-alpine
+    expose:
+      - "5432"
+    networks:
+      - team-net
+
+networks:
+  team-net:
+    driver: bridge
 ```
