@@ -30,3 +30,49 @@ Tasks :
   - Push image ke docker registry kalian masing".
 - Aplikasi dapat berjalan dengan sesuai seperti melakukan login/register.
 ```
+
+# Langkah-Langkah Pengerjaan Tugas Docker
+## Step 1 — Login ke Server
+```bash
+# Login ke server BiznetGio menggunakan SSH key yang sudah kita share untuk sesama:
+ssh -i ~/.ssh/dumbways.pem dumbways@<IP-SERVER>
+
+# Update server:
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+## Step 2 — Clone Wayshub dari Github dan Arsitektur Server
+### Clone Wayshub dari Github
+```bash
+# frontend
+https://github.com/dumbwaysdev/wayshub-frontend
+# backend
+https://github.com/dumbwaysdev/wayshub-backend
+```
+### Arsitektur Server
+```bash
+Arsitektur Server
+Server Abim (kamu): frontend + gateway (Nginx reverse proxy).
+Server Tanu: backend + database (MySQL).
+
+DNS:
+batch24.studentdumbways.my.id → server Abim.
+api.batch24.studentdumbways.my.id → server Tanu.
+```
+
+---
+
+Step 2 — Install Docker & Menjalankan Docker Compose
+
+
+
+
+
+
+
+
+
+
+
