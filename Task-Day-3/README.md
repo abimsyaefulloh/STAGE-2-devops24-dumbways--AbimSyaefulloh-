@@ -16,9 +16,11 @@ Repository & Reference:
 
 Tasks :
 [ Docker ]
-- Rebuild ulang server BiznetGio kalian, lalu gunakan username "dumbways" yang kalian gunakan bersama, pastikan menggunakan login melalui ssh-key dan bukan password. (1 key untuk semua akan menjadi bonus) 
+- Rebuild ulang server BiznetGio kalian, lalu gunakan username "dumbways" yang kalian gunakan bersama,
+  pastikan menggunakan login melalui ssh-key dan bukan password. (1 key untuk semua akan menjadi bonus) 
 - Deploy aplikasi Web Server, Frontend, Backend, serta Database on top `docker compose`
-  - Di dalam docker-compose file buat suatu custom network dengan nama **team kalian**, lalu pasang ke setiap service yang kalian miliki. (Nilai Bonus)
+  - Di dalam docker-compose file buat suatu custom network dengan nama **team kalian**,
+    lalu pasang ke setiap service yang kalian miliki. (Nilai Bonus)
   - Untuk Web Server buatlah configurasi reverse-proxy menggunakan nginx on top docker.
     - **SSL CLOUDFLARE OFF!!!**
     - SSL sebisa mungkin gunakan wildcard
