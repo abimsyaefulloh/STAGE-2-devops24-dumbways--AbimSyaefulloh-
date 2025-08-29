@@ -65,9 +65,10 @@ api.batch24.studentdumbways.my.id → server Tanu.
 ---
 
 Step 2 — Install Docker & Menjalankan Docker Compose
+```bash
+# dokumentasi command docker
 
-
-
+```
 
 
 
