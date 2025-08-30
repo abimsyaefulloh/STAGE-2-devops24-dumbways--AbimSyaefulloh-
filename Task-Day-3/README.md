@@ -29,7 +29,7 @@ Tasks :
       - Backend api.team.studentdumbways.my.id
   - Push image ke docker registry kalian masing".
 - Aplikasi dapat berjalan dengan sesuai seperti melakukan login/register.
-```
+b
 
 # Langkah-Langkah Pengerjaan Tugas Docker
 ## Step 1 — Login ke Server
@@ -67,6 +67,40 @@ api.batch24.studentdumbways.my.id → server Tanu.
 Step 2 — Install Docker & Menjalankan Docker Compose
 ```bash
 # dokumentasi command docker
+# 🔹 Build images
+docker compose build                # build semua service
+docker compose build backend        # build service backend saja
+docker compose build --no-cache     # rebuild tanpa cache
+
+# 🔹 Jalankan & stop container
+docker compose up -d                # start semua service (detached mode)
+docker compose up -d backend        # start backend saja
+docker compose down                 # stop semua service & hapus network
+
+# 🔹 Cek status & logs
+docker compose ps                   # lihat container yg jalan
+docker compose logs -f backend      # lihat log backend realtime
+docker compose logs -f frontend     # lihat log frontend realtime
+docker compose logs -f mysql        # lihat log mysql realtime
+
+# 🔹 Masuk ke dalam container
+docker compose exec backend sh      # masuk shell container backend
+docker compose exec mysql bash      # masuk shell container mysql
+
+# 🔹 Migrasi & seeder (pastikan sequelize-cli sudah terinstall)
+docker compose exec backend sequelize db:migrate      # jalankan migrasi
+docker compose exec backend sequelize db:seed:all     # jalankan semua seeder
+
+# 🔹 Akses MySQL dari container
+docker compose exec mysql mysql -uabim -pdumbways -e "SHOW DATABASES;"
+docker compose exec mysql mysql -uabim -pdumbways wayshub -e "SHOW TABLES;"
+
+# 🔹 Container & images housekeeping
+docker ps -a                         # semua container (jalan & berhenti)
+docker images                        # semua image
+docker rm -f <container_id>          # hapus container
+docker rmi <image_id>                # hapus image
+docker image prune                   # hapus dangling images (<none>)
 
 ```
 
