@@ -100,6 +100,21 @@ docker compose version
 ![Fotoscr](scr/Foto-6.png)  
 
 ### Menjalankan Docker Compose 
+1. Menjalankan docker compose build di directory dumbways-app
+  `docker compose build`
+
+2. Menjalankan docker compose up -d
+  `docker compose up -d`
+
+3. Melihat container dan images yang sudah dibuat
+  - container  
+  `docker ps -a`
+  - images  
+  `docker images`  
+
+5. melihat logs untuk monitoring container
+
+6. membuka databases di container
 
 
 
