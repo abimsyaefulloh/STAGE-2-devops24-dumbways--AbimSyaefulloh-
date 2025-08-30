@@ -92,6 +92,7 @@ docker compose exec backend sequelize db:migrate      # jalankan migrasi
 docker compose exec backend sequelize db:seed:all     # jalankan semua seeder
 
 # 🔹 Akses MySQL dari container
+docker compose exec mysql mysql -uabim -pdumbways 
 docker compose exec mysql mysql -uabim -pdumbways -e "SHOW DATABASES;"
 docker compose exec mysql mysql -uabim -pdumbways wayshub -e "SHOW TABLES;"
 
