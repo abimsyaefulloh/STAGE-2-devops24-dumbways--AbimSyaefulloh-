@@ -113,7 +113,7 @@ docker compose version
   `docker images`  
 
 5. melihat logs untuk monitoring container
-
+  `docker compose logs
 6. membuka databases di container
 
 
