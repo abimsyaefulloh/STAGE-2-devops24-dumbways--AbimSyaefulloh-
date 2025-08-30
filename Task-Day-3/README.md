@@ -109,16 +109,19 @@ docker compose version
 3. Melihat container dan images yang sudah dibuat
   - container  
   `docker ps -a`
+![Fotoscr](scr/Foto-7.png)   
   - images  
   `docker images`  
+![Fotoscr](scr/Foto-8.png)  
 
 5. melihat logs untuk monitoring container
-  `docker compose logs`
-![Fotoscr](scr/Foto-7.png) 
+  `docker compose logs`  
+![Fotoscr](scr/Foto-9-0.png)   
+![Fotoscr](scr/Foto-9-1.png) 
 
 7. membuka databases di container
-`docker compose exec mysql mysql -uabim -pdumbways`
-![Fotoscr](scr/Foto-8.png) 
+`docker compose exec mysql mysql -uabim -pdumbways`  
+![Fotoscr](scr/Foto-10.png) 
 
 ```bash
 # dokumentasi command docker
