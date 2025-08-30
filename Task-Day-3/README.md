@@ -113,10 +113,12 @@ docker compose version
   `docker images`  
 
 5. melihat logs untuk monitoring container
-  `docker compose logs
-6. membuka databases di container
+  `docker compose logs`
+![Fotoscr](scr/Foto-7.png) 
 
-
+7. membuka databases di container
+`docker compose exec mysql mysql -uabim -pdumbways`
+![Fotoscr](scr/Foto-8.png) 
 
 ```bash
 # dokumentasi command docker
@@ -157,6 +159,7 @@ docker rmi <image_id>                # hapus image
 docker image prune                   # hapus dangling images (<none>)
 
 ```
+## Step 3 — Test di Browser
 
 
 
