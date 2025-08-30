@@ -88,15 +88,15 @@ docker compose version
 
 ### Set up Preparation
 - Set up Docker Compose  
-  `docker-compose.yml`
+  `docker-compose.yml`  
 ![Fotoscr](scr/Foto-2.png)  
-- Set up Dockerfile di frontend
-![Fotoscr](scr/Foto-3.png)
-- Set up Dockerfile di backend
-![Fotoscr](scr/Foto-4.png)
-- Set up api.js di frontend
+- Set up Dockerfile di frontend  
+![Fotoscr](scr/Foto-3.png)  
+- Set up Dockerfile di backend  
+![Fotoscr](scr/Foto-4.png)  
+- Set up api.js di frontend  
 ![Fotoscr](scr/Foto-5.png)  
-- Set up config.js di backend
+- Set up config.js di backend  
 ![Fotoscr](scr/Foto-6.png)  
 
 ### Menjalankan Docker Compose 
