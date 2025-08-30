@@ -43,7 +43,7 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## Step 2 — Clone Wayshub dari Github dan Arsitektur Server
+## Step 1 — Clone Wayshub dari Github dan Arsitektur Server
 ### Clone Wayshub dari Github
 ```bash
 # frontend
@@ -52,6 +52,9 @@ https://github.com/dumbwaysdev/wayshub-frontend
 https://github.com/dumbwaysdev/wayshub-backend
 ```
 ### Arsitektur Server
+Login ke Server menggunakan 1 kunci ssh
+- Menambahkan kunci ssh
+![Fotoscr](scr/Foto-0.png)  
 ```bash
 Arsitektur Server
 Server Abim (kamu): frontend + gateway (Nginx reverse proxy).
@@ -64,7 +67,42 @@ api.batch24.studentdumbways.my.id → server Tanu.
 
 ---
 
-Step 2 — Install Docker & Menjalankan Docker Compose
+## Step 2 — Install Docker & Menjalankan Docker Compose
+
+### Install Docker melalui website docker nya
+`https://docs.docker.com/engine/install/ubuntu/`
+![Fotoscr](scr/Foto-1.png)  
+```bash
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+# Cek versi
+docker --version
+docker compose version
+
+```
+
+### Set up Preparation
+- Set up Docker Compose  
+  `docker-compose.yml`
+![Fotoscr](scr/Foto-2.png)  
+- Set up Dockerfile di frontend
+![Fotoscr](scr/Foto-3.png)
+- Set up Dockerfile di backend
+![Fotoscr](scr/Foto-4.png)
+- Set up api.js di frontend
+![Fotoscr](scr/Foto-5.png)  
+- Set up config.js di backend
+![Fotoscr](scr/Foto-6.png)  
+
+### Menjalankan Docker Compose 
+
+
+
 ```bash
 # dokumentasi command docker
 # 🔹 Build images
@@ -104,8 +142,6 @@ docker rmi <image_id>                # hapus image
 docker image prune                   # hapus dangling images (<none>)
 
 ```
-
-
 
 
 
