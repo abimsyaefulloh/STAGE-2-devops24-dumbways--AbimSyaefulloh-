@@ -68,15 +68,18 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
   ![Fotoscr](scr/Foto-13.png)
 - Masuk ke Global Credential
   ![Fotoscr](scr/Foto-14.png)
--
+- Add Credential
   ![Fotoscr](scr/Foto-15.png)
+
+- 
   ![Fotoscr](scr/Foto-16.png)
   ![Fotoscr](scr/Foto-17.png)
+  ![Fotoscr](scr/Foto-17-1.png)
   ![Fotoscr](scr/Foto-18.png)
   ![Fotoscr](scr/Foto-19.png)
   ![Fotoscr](scr/Foto-20.png)
   ![Fotoscr](scr/Foto-21.png)
-  ![Fotoscr](scr/Foto-22.png)
+
 
 
 
