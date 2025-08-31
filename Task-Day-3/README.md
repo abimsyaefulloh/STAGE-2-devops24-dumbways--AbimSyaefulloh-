@@ -179,4 +179,40 @@ docker image prune                   # hapus dangling images (<none>)
 ![Fotoscr](scr/Foto-14.png) 
 
 
+# CATATAN :
+
+## Daftar HTTPS pake Certbot
+
+
+## 1. Install Certbot
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-nginx -y
+```
+---
+
+## 2. Generate Sertifikat HTTPS
+```bash
+sudo certbot --nginx -d domainkamu.com -d www.domain.com
+```
+---
+
+## 3. Wizard Certbot
+* Email untuk notifikasi.
+
+---
+
+## 4. Cek Sertifikat
+
+Kalau berhasil, coba buka:
+```bash
+https://domain.com
+```
+
+Terus tes validasi:
+```bash
+sudo certbot certificates
+```
+
+
 
