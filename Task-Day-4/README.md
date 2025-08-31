@@ -84,8 +84,12 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
   ssh private key  
   Mengatur brance  
   Mengatur Sript file sesuai nama di repositori kita  
-  ![Fotoscr](scr/Foto-21.png)
-- 
+  ![Fotoscr](scr/Foto-21.png)  
+- Stelah selesai mengatur akan muncul table seperti berikut
+  ![Fotoscr](scr/Foto-22.png)  
+
+### Mengecek server 
+  ![Fotoscr](scr/Foto-23.png)  
 
 
 
