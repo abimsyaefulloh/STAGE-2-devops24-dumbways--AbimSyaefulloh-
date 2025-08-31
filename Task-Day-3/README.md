@@ -47,9 +47,13 @@ sudo apt update && sudo apt upgrade -y
 ## Step 1 — Arsitektur Server, Login ke Server, dan Clone Wayshub dari Github
 ### Arsitektur Server
 ```bash
-Arsitektur Server
-Server Abim (kamu): frontend + gateway (Nginx reverse proxy).
-Server Tanu: backend + database (MySQL).
+# Arsitektur Server
+NAMA TEAM : Batch24
+Abim :
+- Gateway : Reverse Proxy nginx
+- Abim22 (app server 1) : frontend, backend, databases dan docker
+Mas Tanu :
+- tanu96 (app server 2) : CI/CD Jenkins
 
 DNS:
 batch24.studentdumbways.my.id
