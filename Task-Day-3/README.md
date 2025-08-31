@@ -170,9 +170,13 @@ docker image prune                   # hapus dangling images (<none>)
 
 ```
 ## Step 3 — Test di Browser
+![Fotoscr](scr/Foto-11.png) 
 
+![Fotoscr](scr/Foto-12.png) 
 
+![Fotoscr](scr/Foto-13.png) 
 
+![Fotoscr](scr/Foto-14.png) 
 
 
 
