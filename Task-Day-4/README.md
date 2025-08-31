@@ -37,13 +37,11 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
 ![Fotoscr](scr/Foto-0.png)
 
 ### Konfigurasi Jenkins
-- Unlock Jenkins 
-  masuk keadalam logs container jenkinsnya untuk melihat passwordnya  
+- Unlock Jenkins, masuk ke dalam logs container jenkinsnya untuk melihat passwordnya  
   ![Fotoscr](scr/Foto-1.png)  
   ![Fotoscr](scr/Foto-2.png)  
 - Customize Jenkins  
   ![Fotoscr](scr/Foto-3.png)  
-  lalala
   ![Fotoscr](scr/Foto-4.png)
   ![Fotoscr](scr/Foto-5.png)
   ![Fotoscr](scr/Foto-6.png)
