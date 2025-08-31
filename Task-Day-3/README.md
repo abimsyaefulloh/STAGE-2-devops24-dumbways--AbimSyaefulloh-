@@ -198,9 +198,7 @@ sudo certbot --nginx -d domainkamu.com -d www.domain.com
 ---
 
 ## 3. Wizard Certbot
-* Email untuk notifikasi.
-
----
+ `Email untuk notifikasi.`
 
 ## 4. Cek Sertifikat
 
