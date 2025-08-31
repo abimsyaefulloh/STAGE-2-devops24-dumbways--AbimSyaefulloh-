@@ -71,13 +71,19 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
 - Add Credential
   ![Fotoscr](scr/Foto-15.png)
 
-- 
-  ![Fotoscr](scr/Foto-16.png)
+- Mengisi Username server with private key server
   ![Fotoscr](scr/Foto-17.png)
   ![Fotoscr](scr/Foto-17-1.png)
+- Membuat Job baru
   ![Fotoscr](scr/Foto-18.png)
+- Memilih project, memilih pipeline
   ![Fotoscr](scr/Foto-19.png)
+- Konfigurasi pipeline, menambahkan Github hook trigger (memastikan koneksi github ke jenkins itu aman)
   ![Fotoscr](scr/Foto-20.png)
+- Memasukan repositori URL dari github kita
+  ssh private key
+  Mengatur brance
+  Mengatur Sript file sesuai nama di repositori kita
   ![Fotoscr](scr/Foto-21.png)
 
 
