@@ -59,7 +59,8 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
   ![Fotoscr](scr/Foto-7.png)  
 - Instace Configuration,
   untuk mengatur jenkins url bisa menggunakan domain yang sudah terdaftar atau ip address 
-  ![Fotoscr](scr/Foto-8.png)  
+  ![Fotoscr](scr/Foto-8.png)
+  ![Fotoscr](scr/Foto-8-1.png)    
 - Jenkins is ready, 
   ![Fotoscr](scr/Foto-9.png)  
 - Login ke Jenkins dan Konfigurasi  
