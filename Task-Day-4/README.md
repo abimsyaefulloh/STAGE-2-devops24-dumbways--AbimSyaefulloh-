@@ -54,18 +54,29 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
   menggunakan username `admin` dan password jenkins sebelumnya   `1953f41f04c04db68faafa8d799605f3`
   ![Fotoscr](scr/Foto-7.png)  
 - Instace Configuration,
-  untuk mengatur jenkins url bisa menggunakan domain yang        sudah terdaftar atau ip address 
+  untuk mengatur jenkins url bisa menggunakan domain yang sudah terdaftar atau ip address 
   ![Fotoscr](scr/Foto-8.png)  
 - Jenkins is ready, 
   ![Fotoscr](scr/Foto-9.png)  
 - Login ke Jenkins dan Konfigurasi  
   ![Fotoscr](scr/Foto-10.png)
-
-
-
-
-
-
+- Masuk kedalam setting
+  ![Fotoscr](scr/Foto-11.png)
+- Masuk kekonfigurasi credentials
+  ![Fotoscr](scr/Foto-12.png)
+- Masuk ke system
+  ![Fotoscr](scr/Foto-13.png)
+- Masuk ke Global Credential
+  ![Fotoscr](scr/Foto-14.png)
+-
+  ![Fotoscr](scr/Foto-15.png)
+  ![Fotoscr](scr/Foto-16.png)
+  ![Fotoscr](scr/Foto-17.png)
+  ![Fotoscr](scr/Foto-18.png)
+  ![Fotoscr](scr/Foto-19.png)
+  ![Fotoscr](scr/Foto-20.png)
+  ![Fotoscr](scr/Foto-21.png)
+  ![Fotoscr](scr/Foto-22.png)
 
 
 
