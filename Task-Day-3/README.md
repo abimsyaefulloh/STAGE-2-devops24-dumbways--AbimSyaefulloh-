@@ -55,7 +55,7 @@ Abim :
 Mas Tanu :
 - tanu96 (app server 2) : CI/CD Jenkins
 
-DNS:
+Domain :
 batch24.studentdumbways.my.id
 api.batch24.studentdumbways.my.id
 ```
