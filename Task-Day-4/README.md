@@ -118,8 +118,9 @@ git branch -M main
 git push -u origin main
 ```
 ### 
+  ![Fotoscr](scr/Foto-25.png)  
 
-
+  ![Fotoscr](scr/Foto-26.png)  
 
 
 
