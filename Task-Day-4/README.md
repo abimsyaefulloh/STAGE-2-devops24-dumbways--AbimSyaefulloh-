@@ -88,13 +88,36 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
 - Stelah selesai mengatur akan muncul table seperti berikut
   ![Fotoscr](scr/Foto-22.png)  
 
-### Mengecek server 
+# Hubungkan GitHub → Jenkins (auto trigger)
+### sudah ada file Jenkins didirektori 
   ![Fotoscr](scr/Foto-23.png)  
+### Pastikan server sudah terhubung ke Github
+  ![Fotoscr](scr/Foto-24.png)  
+### Push ke Github
+```bash
+# Inisialisasi git (kalau belum)
+git init
 
+# Tambahkan semua file
+git add .
 
+# Commit
+git commit -m "Initial commit frontend"
 
+# cek remote
+git memote -v
 
+# kalau misal mau mengganti remotenya bisa dihapus dulu
+git remote remove
 
+# Tambah remote SSH
+git remote add origin git@github.com:USERNAME/wayshub-frontend.git
+
+# Push ke branch main
+git branch -M main
+git push -u origin main
+```
+### 
 
 
 
