@@ -1,4 +1,5 @@
 ```bash
+TUGAS :
 Sebelum mengerjakan tugas, mohon persiapkan :
 - Akun Github dan buat repository dengan judul "devops24-dumbways-<nama kalian>"
 - Gunakan file README.md untuk isi tugas kalian
