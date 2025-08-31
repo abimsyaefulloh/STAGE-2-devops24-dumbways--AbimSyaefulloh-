@@ -52,7 +52,10 @@ ID kontainer akan dikembalikan dari keluaran perintah di atas.
 - Tampilan setup instalasinya
   ![Fotoscr](scr/Foto-6.png)  
 - Create First Admin User  
-  menggunakan username `admin` dan password jenkins sebelumnya   `1953f41f04c04db68faafa8d799605f3`
+  menggunakan username 
+ `admin`  
+  dan password jenkins sebelumnya 
+  `1953f41f04c04db68faafa8d799605f3`
   ![Fotoscr](scr/Foto-7.png)  
 - Instace Configuration,
   untuk mengatur jenkins url bisa menggunakan domain yang sudah terdaftar atau ip address 
