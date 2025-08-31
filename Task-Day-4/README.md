@@ -117,10 +117,11 @@ git remote add origin git@github.com:USERNAME/wayshub-frontend.git
 git branch -M main
 git push -u origin main
 ```
-### 
+### Mengecek Consol Outputnya 
   ![Fotoscr](scr/Foto-25.png)  
-
   ![Fotoscr](scr/Foto-26.png)  
+
+### 
 
 
 
