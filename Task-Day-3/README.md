@@ -193,7 +193,7 @@ sudo apt install certbot python3-certbot-nginx -y
 
 ## 2. Generate Sertifikat HTTPS
 ```bash
-sudo certbot --nginx -d domainkamu.com -d www.domain.com
+sudo certbot --nginx -d studentdumbways.my.id
 ```
 ---
 
@@ -204,7 +204,7 @@ sudo certbot --nginx -d domainkamu.com -d www.domain.com
 
 Kalau berhasil, coba buka:
 ```bash
-https://domain.com
+https://studentdumbways.my.id
 ```
 
 Terus tes validasi:
