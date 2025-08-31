@@ -43,26 +43,28 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## Step 1 — Clone Wayshub dari Github dan Arsitektur Server
-### Clone Wayshub dari Github
-```bash
-# frontend
-https://github.com/dumbwaysdev/wayshub-frontend
-# backend
-https://github.com/dumbwaysdev/wayshub-backend
-```
+## Step 1 — Arsitektur Server, Login ke Server, dan Clone Wayshub dari Github
 ### Arsitektur Server
-Login ke Server menggunakan 1 kunci ssh
-- Menambahkan kunci ssh
-![Fotoscr](scr/Foto-0.png)  
 ```bash
 Arsitektur Server
 Server Abim (kamu): frontend + gateway (Nginx reverse proxy).
 Server Tanu: backend + database (MySQL).
 
 DNS:
-batch24.studentdumbways.my.id → server Abim.
-api.batch24.studentdumbways.my.id → server Tanu.
+batch24.studentdumbways.my.id
+api.batch24.studentdumbways.my.id
+```
+
+### Login ke Server menggunakan 1 kunci ssh
+- Menambahkan kunci ssh
+![Fotoscr](scr/Foto-0.png)
+
+### Clone Wayshub dari Github
+```bash
+# frontend
+https://github.com/dumbwaysdev/wayshub-frontend
+# backend
+https://github.com/dumbwaysdev/wayshub-backend
 ```
 
 ---
