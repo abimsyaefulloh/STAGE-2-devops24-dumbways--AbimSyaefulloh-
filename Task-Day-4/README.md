@@ -33,8 +33,7 @@ Tasks :
 This will run Jenkins in detached mode with port forwarding and volume added.  
 
 
-### Mengecek jenkins yang jalan di container 
-![Fotoscr](scr/Foto-0.png)
+
 
 ### Konfigurasi Jenkins
 - Unlock Jenkins, masuk ke dalam logs container jenkinsnya untuk melihat passwordnya  
