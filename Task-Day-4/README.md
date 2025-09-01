@@ -58,6 +58,7 @@ This will run Jenkins in detached mode with port forwarding and volume added.
 - Instace Configuration,
   untuk mengatur jenkins url bisa menggunakan domain yang sudah terdaftar atau ip address 
   ![Fotoscr](scr/Foto-8.png)
+  `pipeline.batch24.studentdumbways.my.id`  
   ![Fotoscr](scr/Foto-8-1.png)    
 - Jenkins is ready, 
   ![Fotoscr](scr/Foto-9.png)  
@@ -76,9 +77,6 @@ This will run Jenkins in detached mode with port forwarding and volume added.
 
 - Mengisi Username server with private key server
   ![Fotoscr](scr/Foto-17.png) 
-
-  `pipeline.batch24.studentdumbways.my.id`
-  
   ![Fotoscr](scr/Foto-17-1.png)
 - Membuat Job baru
   ![Fotoscr](scr/Foto-18.png)
