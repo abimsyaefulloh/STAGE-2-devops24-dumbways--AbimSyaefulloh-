@@ -25,7 +25,7 @@ Tasks :
      - Push ke Docker Hub
 - Auto trigger setiap ada perubahan di SCM (setiap repository berubah, otomatis menjalankan build)
 ```
-# Insatall Jenkins di App Server 2
+# Install Jenkins di App Server 2
 ### Membuat direktori jenkins dan Insatall jenkins lewat dokumntasi di github  
 `https://github.com/jenkinsci/docker/blob/master/README.md`  
 ![Fotoscr](scr/Foto-01.png)
