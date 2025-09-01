@@ -30,9 +30,8 @@ Tasks :
 `https://github.com/jenkinsci/docker/blob/master/README.md`  
 ![Fotoscr](scr/Foto-01.png)
 `docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17`  
-Ini akan menjalankan Jenkins dalam mode terpisah dengan penerusan porta dan penambahan volume.  
-Anda dapat mengakses log dengan perintah 'docker logs CONTAINER_ID' untuk memeriksa token login pertama.  
-ID kontainer akan dikembalikan dari keluaran perintah di atas.
+This will run Jenkins in detached mode with port forwarding and volume added.  
+
 
 ### Mengecek jenkins yang jalan di container 
 ![Fotoscr](scr/Foto-0.png)
