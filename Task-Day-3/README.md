@@ -194,14 +194,18 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 ---
 
-## 2. Generate Sertifikat HTTPS
+## 2. Wizard Certbot
+```bash
+sudo certbot --nginx
+# menambahkan email untuk notifikasi
+ ```
+---
+ 
+## 3. Generate Sertifikat HTTPS
 ```bash
 sudo certbot --nginx -d batch24.studentdumbways.my.id
 ```
 ---
-
-## 3. Wizard Certbot
- `Email untuk notifikasi.`
 
 ## 4. Cek Sertifikat
 
