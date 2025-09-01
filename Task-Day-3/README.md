@@ -187,7 +187,7 @@ docker image prune                   # hapus dangling images (<none>)
 ## 1. Install Certbot
 ```bash
 sudo apt update
-sudo apt install certbot python3-certbot-nginx -y
+sudo snap install --classic certbot
 ```
 ---
 
