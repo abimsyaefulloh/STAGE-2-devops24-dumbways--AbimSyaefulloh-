@@ -182,7 +182,7 @@ docker image prune                   # hapus dangling images (<none>)
 # CATATAN :
 
 ## Daftar HTTPS pake Certbot
-
+![Fotoscr](scr/Certbot-1.png) 
 
 ## 1. Install Certbot
 ```bash
