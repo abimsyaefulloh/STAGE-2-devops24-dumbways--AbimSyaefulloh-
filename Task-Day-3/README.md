@@ -188,6 +188,9 @@ docker image prune                   # hapus dangling images (<none>)
 ```bash
 sudo apt update
 sudo snap install --classic certbot
+
+# membuat link binary
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 ---
 
@@ -211,6 +214,5 @@ Terus tes validasi:
 ```bash
 sudo certbot certificates
 ```
-
 
 
