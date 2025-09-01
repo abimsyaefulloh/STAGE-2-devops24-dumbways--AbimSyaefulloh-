@@ -196,7 +196,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 ## 2. Generate Sertifikat HTTPS
 ```bash
-sudo certbot --nginx -d studentdumbways.my.id
+sudo certbot --nginx -d batch24.studentdumbways.my.id
 ```
 ---
 
@@ -207,7 +207,7 @@ sudo certbot --nginx -d studentdumbways.my.id
 
 Kalau berhasil, coba buka:
 ```bash
-https://studentdumbways.my.id
+https://batch24.studentdumbways.my.id
 ```
 
 Terus tes validasi:
