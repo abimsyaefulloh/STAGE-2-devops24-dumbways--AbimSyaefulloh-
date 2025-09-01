@@ -75,8 +75,10 @@ This will run Jenkins in detached mode with port forwarding and volume added.
   ![Fotoscr](scr/Foto-15.png)
 
 - Mengisi Username server with private key server
-  ![Fotoscr](scr/Foto-17.png)
+  ![Fotoscr](scr/Foto-17.png) 
+
   `pipeline.batch24.studentdumbways.my.id`
+  
   ![Fotoscr](scr/Foto-17-1.png)
 - Membuat Job baru
   ![Fotoscr](scr/Foto-18.png)
