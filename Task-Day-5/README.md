@@ -1,11 +1,15 @@
 ```bash
 Task:
-- Dengan mendaftar akun free tier AWS/GCP/Azure, buatlah Infrastructre dengan terraform menggunakan registry yang sudah ada. dengan beberapa aturan berikut :
+- Dengan mendaftar akun free tier AWS/GCP/Azure,
+buatlah Infrastructre dengan terraform menggunakan registry yang sudah ada.
+dengan beberapa aturan berikut :
    - Buatlah 2 buah server dengan OS ubuntu 24 dan debian 11 (Untuk spec menyesuaikan)
    - attach vpc ke dalam server tersebut
    - attach ip static ke vm yang telah kalian buat
    - pasang firewall ke dalam server kalian dengan rule {allow all ip(0.0.0.0/0)}
-   - buatlah 2 block storage di dalam terraform kalian, lalu attach block storage tersebut ke dalam server yang ingin kalian buat. (pasang 1 ke server ubuntu dan  1 di server debian)
+   - buatlah 2 block storage di dalam terraform kalian,
+     lalu attach block storage tersebut ke dalam server yang ingin kalian buat.
+     (pasang 1 ke server ubuntu dan  1 di server debian)
    - test ssh ke server
 - Buat terraform code kalian serapi mungkin
  - simpan script kalian ke dalam github dengan format tree sebagai berikut:
@@ -25,7 +29,7 @@ Task:
           │ └── main.tf
           │ └── providers.tf
           │ └── etc
-```
+
 Reference :
 [Amazon Web Services (AWS)](https://aws.amazon.com/free/)
 [Google Cloud Platform (GCP)](https://cloud.google.com/free)
