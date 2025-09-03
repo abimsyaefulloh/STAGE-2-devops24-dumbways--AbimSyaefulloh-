@@ -85,9 +85,10 @@ This will run Jenkins in detached mode with port forwarding and volume added.
 - Konfigurasi pipeline, menambahkan Github hook trigger (memastikan koneksi github ke jenkins itu aman)
   ![Fotoscr](scr/Foto-20.png)
 - Memasukan repositori URL dari github kita  
-  ssh private key  
-  Mengatur brance  
-  Mengatur Sript file sesuai nama di repositori kita  
+  dan mengatur :
+  - ssh private key  
+  - brance  
+  - Sript file ( sesuai nama scriptfile di repositori kita ) 
   ![Fotoscr](scr/Foto-21.png)  
 - Stelah selesai mengatur akan muncul table seperti berikut
   ![Fotoscr](scr/Foto-22.png)  
