@@ -24,7 +24,6 @@ Buatlah ansible untuk :
  - Setup reverse-proxy
  - Generated SSL certificate
  - simpan script kalian ke dalam github dengan format tree sebagai berikut:
-```sh
   Automation  
   |  
   | Terraform
@@ -49,4 +48,4 @@ Buatlah ansible untuk :
     ├── lolrandom2.yaml
     └── lolrandom3.yaml
 ```
-```
+
