@@ -220,5 +220,5 @@ Terus tes validasi:
 ```bash
 sudo certbot certificates
 ```
-
+![Fotoscr](scr/Certbot-2.png) 
 
