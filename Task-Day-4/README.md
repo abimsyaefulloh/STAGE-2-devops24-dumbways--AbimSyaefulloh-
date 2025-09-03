@@ -94,7 +94,7 @@ This will run Jenkins in detached mode with port forwarding and volume added.
   ![Fotoscr](scr/Foto-22.png)  
 
 # Hubungkan GitHub → Jenkins (auto trigger)
-### sudah ada file Jenkins didirektori 
+### Pastikan sudah ada file Jenkins didirektori 
   ![Fotoscr](scr/Foto-23.png)  
   
 ### Pastikan ke 2 server sudah terhubung ke Github
