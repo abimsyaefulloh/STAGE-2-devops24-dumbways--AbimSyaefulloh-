@@ -111,12 +111,6 @@ git commit -m "Initial commit frontend"
 # cek remote
 git memote -v
 
-# kalau misal mau mengganti remotenya bisa dihapus dulu
-git remote remove
-
-# Tambah remote SSH
-git remote add origin git@github.com:USERNAME/wayshub-frontend.git
-
 # Push ke branch main
 git branch -M main
 git push -u origin main
