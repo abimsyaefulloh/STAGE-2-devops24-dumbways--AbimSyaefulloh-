@@ -203,9 +203,9 @@ sudo certbot --nginx
  
 ## 3. Generate Sertifikat HTTPS
 ```bash
-sudo certbot --nginx -d api.batch24.studentdumbways.my.id -d www.api.batch24.studentdumbways.my.id 
-
 sudo certbot --nginx -d batch24.studentdumbways.my.id -d www.batch24.studentdumbways.my.id
+
+sudo certbot --nginx -d api.batch24.studentdumbways.my.id -d  
 ```
 ---
 
