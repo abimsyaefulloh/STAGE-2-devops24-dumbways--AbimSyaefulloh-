@@ -96,9 +96,15 @@ This will run Jenkins in detached mode with port forwarding and volume added.
 # Hubungkan GitHub → Jenkins (auto trigger)
 ### sudah ada file Jenkins didirektori 
   ![Fotoscr](scr/Foto-23.png)  
-### Pastikan server sudah terhubung ke Github
-  ![Fotoscr](scr/Foto-24.png)  
-### Push ke Github
+  
+### Pastikan ke 2 server sudah terhubung ke Github
+  ![Fotoscr](scr/gtFoto-1.png)  
+
+### Lakukan perubahan 
+  disini saya merubah file README.md yang ada di Direktori wayshub-frontend
+   ![Fotoscr](scr/gtFoto-3.png)  
+ 
+### Lakukan Push ke Github
 ```bash
 # Inisialisasi git (kalau belum)
 git init
@@ -116,11 +122,19 @@ git memote -v
 git branch -M main
 git push -u origin main
 ```
-### Mengecek Consol Outputnya 
-  ![Fotoscr](scr/Foto-25.png)  
-  ![Fotoscr](scr/Foto-26.png)  
+ ![Fotoscr](scr/gtFoto-5.png) 
+ 
+### Lihat perubahannya di github
+ ![Fotoscr](scr/gtFoto-6.png) 
 
-### 
+### Lakukan Trigger build 
+ Tekan tombol `build now`
+ ![Fotoscr](scr/gtFoto-7.png) 
+
+### Mengecek Consol Outputnya 
+  ![Fotoscr](scr/gtFoto-8.png)  
+  ![Fotoscr](scr/gtFoto-9.png)  
+
 
 
 
