@@ -49,23 +49,29 @@ Buatlah ansible untuk :
     └── lolrandom3.yaml
 ```
 
-## Langkah-langkah Tugas Day 6 - Ansible (Automasi Konfigurasi Server)
+# Tugas Day 6 
 
-1. **Persiapan Repository dan Struktur Folder**  
-   - Buat folder `Automation/Ansible`  
-   - Siapkan file `ansible.cfg`, `Inventory`, dan folder `group_vars`  
-   - Buat beberapa playbook YAML sesuai kebutuhan (misal `lolrandom1.yaml`, dll)
+## 1. Install Ansible 
+`https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu`  
+![Fotoscr](scr/Foto-0.png)  
+![Fotoscr](scr/Foto-1.png)  
+Disini saya memngunakan wsl Ubuntu di windows
 
-2. **Konfigurasi Inventory**  
-   - Masukkan IP static server hasil Terraform ke file Inventory  
-   - Kelompokkan server jika perlu (misal group ubuntu, debian, monitoring)
+## 2. Konfigurasi Inventory  
+Mengisi IP Address dan User
+![Fotoscr](scr/Foto-2.png)  
+Kelompokkan server jika perlu
 
-3. **Buat Variabel Global**  
-   - Definisikan variabel umum di `group_vars/all` seperti user, password, ssh key path
+## 3. Konfigurasi asible.cfg
+Menambahkan ssh
+![Fotoscr](scr/Foto-3.png)  
 
-4. **Playbook Membuat User Baru**  
-   - Buat playbook untuk membuat user baru di server  
-   - Konfigurasi login menggunakan SSH key dan password
+Definisikan variabel umum di `group_vars/all` seperti user, password, ssh key path
+
+## 4. Membuat playbook User Baru
+![Fotoscr](scr/Foto-4.png)  
+Buat playbook untuk membuat user baru di server  
+Konfigurasi login menggunakan SSH key dan password
 
 5. **Playbook Instalasi Docker**  
    - Buat playbook untuk menginstall Docker di server target
