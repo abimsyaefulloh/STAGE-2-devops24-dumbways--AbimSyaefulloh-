@@ -63,20 +63,27 @@ Mengisi IP Address dan User
 Kelompokkan server jika perlu
 
 ## 3. Konfigurasi asible.cfg
-Menambahkan ssh
+```bash
+inventory = Inventory
+menentukan file (inventory) yang akan dipakai.
+private_key_file = /home/abim/.ssh/biznet
+Ansible pakai SSH key ini untuk login ke server.
+host_key_checking = False
+Nonaktifkan pengecekan known_hosts (biar nggak ribet, tapi agak kurang aman).
+interpreter_python = auto_silent
+Biarkan Ansible otomatis pilih Python di host remote tanpa kasih warning.
+```
 ![Fotoscr](scr/Foto-3.png)  
-
-Definisikan variabel umum di `group_vars/all` seperti user, password, ssh key path
 
 ## 4. Membuat playbook User Baru
 ![Fotoscr](scr/Foto-4.png)  
 Buat playbook untuk membuat user baru di server  
 Konfigurasi login menggunakan SSH key dan password
 
-5. **Playbook Instalasi Docker**  
+## 5. Playbook Instalasi Docker
    - Buat playbook untuk menginstall Docker di server target
 
-6. **Playbook Deploy Aplikasi Frontend**  
+6. Playbook Deploy Aplikasi Frontend
    - Automasi deployment aplikasi frontend yang sudah pernah digunakan  
    - Pastikan aplikasi berjalan dengan baik setelah deploy
 
