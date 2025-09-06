@@ -80,6 +80,9 @@ Biarkan Ansible otomatis pilih Python di host remote tanpa kasih warning.
 Buat playbook untuk membuat user baru di server  
 Konfigurasi login menggunakan SSH key dan password
 
+## 5. Membuat playbook Nginx, reverse proxy, certbot 
+
+
 ## 5. Playbook Instalasi Docker
    - Buat playbook untuk menginstall Docker di server target
 
