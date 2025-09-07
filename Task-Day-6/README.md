@@ -123,4 +123,4 @@ Buat playbook untuk menginstall Docker, deployment aplikasi frontend.
 ### Verifikasi Playbook
 ---
 
-Kalau kamu mau, saya juga bisa bantu buatkan template README.md untuk dokumentasi tugasmu. Semoga membantu!
+
