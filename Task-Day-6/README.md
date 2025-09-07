@@ -109,13 +109,14 @@ Buat playbook untuk menginstall Docker, deployment aplikasi frontend.
 - setup reverse proxy, reload nginx
 - setup certbot 
 ![Fotoscr](scr/Foto-7.png) 
+![Fotoscr](scr/Foto-8.png)
 
 ---
 
 ### 7. Playbook Instalasi Monitoring Server   
 - Instal node exporter, Prometheus, dan Grafana menggunakan Ansible  
 - Konfigurasi monitoring agar bisa memantau server
-![Fotoscr](scr/Foto-8.png) 
+![Fotoscr](scr/Foto-9.png) 
 
 ---
 
