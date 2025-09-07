@@ -57,10 +57,14 @@ Buatlah ansible untuk :
 ![Fotoscr](scr/Foto-1.png)  
 Disini saya memngunakan wsl Ubuntu di windows
 
+---
+
 ## 2. Konfigurasi Inventory  
 Mengisi IP Address dan User
 ![Fotoscr](scr/Foto-2.png)  
 Kelompokkan server jika perlu
+
+---
 
 ## 3. Konfigurasi asible.cfg
 ```bash
@@ -75,21 +79,45 @@ Biarkan Ansible otomatis pilih Python di host remote tanpa kasih warning.
 ```
 ![Fotoscr](scr/Foto-3.png)  
 
+---
+
 ## 4. Membuat playbook User Baru
 ![Fotoscr](scr/Foto-4.png)  
 Buat playbook untuk membuat user baru di server  
+- user : abim
+- password : abim12345 (terenkripsi)
 Konfigurasi login menggunakan SSH key dan password
 
-## 5. Membuat playbook Nginx, reverse proxy, certbot 
+---
 
-
-## 6. Playbook Instalasi Docker dan Deploy Aplikasi Frontend
+## 5. Playbook Instalasi Docker dan Deploy Aplikasi Frontend
 Buat playbook untuk menginstall Docker, deployment aplikasi frontend.
-![Fotoscr](scr/Foto-3.png) 
+- clone repo `https://github.com/abimsyaefulloh/wayshub-frontend.git`
+- install git, dan periperal
+- setup port
+- install docker 
+- Build images
+- run container frontend
+![Fotoscr](scr/Foto-5.png) 
+![Fotoscr](scr/Foto-6.png) 
 
-### 7. Playbook Instalasi Monitoring Server  
-   - Instal node exporter, Prometheus, dan Grafana menggunakan Ansible  
-   - Konfigurasi monitoring agar bisa memantau server
+---
+
+## 6. Membuat playbook Nginx, reverse proxy, certbot 
+- setup domain dan email
+- install nginx, certbot 
+- setup reverse proxy, reload nginx
+- setup certbot 
+![Fotoscr](scr/Foto-7.png) 
+
+---
+
+### 7. Playbook Instalasi Monitoring Server   
+- Instal node exporter, Prometheus, dan Grafana menggunakan Ansible  
+- Konfigurasi monitoring agar bisa memantau server
+![Fotoscr](scr/Foto-8.png) 
+
+---
 
 ### Verifikasi Playbook
 ---
