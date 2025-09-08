@@ -48,6 +48,7 @@ Tentu! Berikut saya buatkan langkah-langkah pengerjaan tugas Day 5 (Terraform) d
   `https://developer.hashicorp.com/terraform/install#linux`  
   AWS CLI  
   `https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
+  ![Fotoscr](scr/Foto-0-1.png)
 - AWS configure, isi Access Key, Secret, region dan output format
 ![Fotoscr](scr/Foto-0.png)
 ![Fotoscr](scr/Foto-1.png)
