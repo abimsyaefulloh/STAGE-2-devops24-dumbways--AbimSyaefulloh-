@@ -1,0 +1,28 @@
+```bash
+Sebelum mengerjakan tugas, mohon persiapkan :
+- Akun Github dan buat repository dengan judul "devops24-dumbways-<nama kalian>"
+- Gunakan file README.md untuk isi tugas kalian
+- Buatlah langkah-langkah pengerjaan tugas beserta dokumentasinya
+
+Docker Images :
+[node-exporter](https://hub.docker.com/r/prom/node-exporter)
+[Prometheus](https://hub.docker.com/r/prom/prometheus)
+[Grafana Dashboard](https://hub.docker.com/r/grafana/grafana)
+[Cadvisor](https://github.com/google/cadvisor)
+
+Tasks :
+- Setup node-exporter, prometheus dan Grafana menggunakan docker / native diperbolehkan
+- monitoring seluruh server yang kalian buat di materi terraform dan yang kalian miliki di biznet.
+- Reverse Proxy
+    - bebas ingin menggunakan nginx native / docker
+    - Domain
+      - exporter-$name.studentdumbways.my.id (node exporter)
+      - prom-$name.studentdumbways.my.id (prometheus)
+      - monitoring-$name.studentdumbways.my.id (grafana)
+    - SSL Cloufflare on / certbot SSL biasa / wildcard SSL diperbolehkan
+- Dengan Grafana, buatlah :
+    -  Dashboard untuk monitor resource server (CPU, RAM & Disk Usage)  buatlah se freestyle kalian.
+    -  Buat dokumentasi tentang rumus `promql` yang kalian gunakan
+```
+
+## 
