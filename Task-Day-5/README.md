@@ -41,38 +41,76 @@ Tentu! Berikut saya buatkan langkah-langkah pengerjaan tugas Day 5 (Terraform) d
 
 ## Langkah-langkah Tugas Day 5 - Terraform (Infrastruktur Cloud)
 
-1. **Persiapan Akun Cloud**  
-   - Daftar akun free tier di AWS, GCP, atau Azure  
-   - Siapkan kredensial akses (API key, secret, service account) untuk Terraform
+## 1. Persiapan Akun Cloud
+- Daftar akun free tier di AWS 
+- Install Terraform & AWS CLI
+- AWS configure, isi Access Key, Secret, region dan output format
+![Fotoscr](scr/Foto-0.png)
+![Fotoscr](scr/Foto-1.png)
 
-2. **Setup Project dan Struktur Folder**  
-   - Buat folder `Automation/Terraform/<provider>` (misal `aws`, `gcp`, atau `azure`)  
-   - Siapkan file konfigurasi utama seperti `main.tf`, `providers.tf`, dan folder `etc` jika diperlukan
 
-3. **Definisikan Provider Terraform**  
-   - Konfigurasi provider cloud yang dipilih dengan kredensial dan region
+---
 
-4. **Buat Resource VPC dan Network**  
-   - Definisikan VPC (Virtual Private Cloud) untuk jaringan server  
-   - Buat subnet dan konfigurasi jaringan lain jika perlu
+## 2. Setup Project dan Struktur Folder
+```bash
+  Automation  
+  |  
+  | Terraform
+  └─|  └── aws
+          │ └── main.tf
+          │ └── providers.tf
+          │ └── outputs.tf
+          │ └── variables.tf   
+          │ └── version.tf
+```
 
-5. **Provision Server VM**  
+---
+
+## 3. Provision Server VM  
    - Buat 2 VM:  
      - 1 dengan OS Ubuntu 24  
-     - 1 dengan OS Debian 11  
-   - Sesuaikan spesifikasi VM sesuai kebutuhan
+     - 1 dengan OS Debian 13  
+![Fotoscr](scr/Foto-2.png)
 
-6. **Assign IP Static ke VM**  
-   - Buat dan attach IP static (Elastic IP atau equivalent) ke masing-masing VM
+---
 
-7. **Setup Firewall Rules**  
-   - Buat aturan firewall yang mengizinkan akses dari semua IP (0.0.0.0/0)  
-   - Attach firewall ke VM atau subnet sesuai provider
+## 4. Setup terraform
+### versions.tf
+```bash
+Mengunci versi Terraform & provider supaya konsisten di semua mesin.
+- minimal versi
+- daftar provider
+```
+![Fotoscr](scr/Foto-3.png)
 
-8. **Buat dan Attach Block Storage**  
-   - Buat 2 block storage terpisah  
-   - Attach 1 block storage ke VM Ubuntu  
-   - Attach 1 block storage ke VM Debian
+### providers.tf
+```bash
+- Mengatur provider AWS
+- Region default tempat resource dibuat
+```
+![Fotoscr](scr/Foto-4.png)
+
+### variables.tf
+```bash
+Mendefinisikan input yang bisa kamu isi saat terraform apply atau diubah default-nya:
+- project_name (penamaan resource),
+- aws_region (contoh: ap-southeast-2),
+- instance_type (contoh: t3.small).
+```
+![Fotoscr](scr/Foto-5.png)
+
+### outputs.tf
+```bash
+Menampilkan ringkasan hasil setelah apply:
+- vpc_id, public_subnet_ids,
+- ubuntu_instance_public_ip, debian_instance_public_ip.
+```
+![Fotoscr](scr/Foto-6.png)
+
+### main.tf
+
+
+
 
 9. **Inisialisasi dan Deploy Terraform**  
    - Jalankan `terraform init` untuk inisialisasi  
@@ -80,11 +118,7 @@ Tentu! Berikut saya buatkan langkah-langkah pengerjaan tugas Day 5 (Terraform) d
    - Jalankan `terraform apply` untuk membuat resource di cloud
 
 10. **Testing dan Verifikasi**  
-    - Coba SSH ke kedua server menggunakan IP static yang sudah dibuat  
-    - Pastikan server berjalan dan storage sudah terpasang
 
-11. **Dokumentasi dan Commit**  
-    - Dokumentasikan langkah dan konfigurasi di `README.md`  
-    - Commit dan push seluruh file Terraform ke GitHub dengan struktur folder yang sudah ditentukan
+
 
 ---
