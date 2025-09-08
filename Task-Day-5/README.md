@@ -43,7 +43,11 @@ Tentu! Berikut saya buatkan langkah-langkah pengerjaan tugas Day 5 (Terraform) d
 
 ## 1. Persiapan Akun Cloud
 - Daftar akun free tier di AWS 
-- Install Terraform & AWS CLI
+- Install Terraform & AWS CLI  
+  Terraform  
+  `https://developer.hashicorp.com/terraform/install#linux`
+  AWS CLI  
+  `https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html`
 - AWS configure, isi Access Key, Secret, region dan output format
 ![Fotoscr](scr/Foto-0.png)
 ![Fotoscr](scr/Foto-1.png)
