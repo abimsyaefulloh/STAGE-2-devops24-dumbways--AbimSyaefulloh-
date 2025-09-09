@@ -120,7 +120,4 @@ Buat playbook untuk menginstall Docker, deployment aplikasi frontend.
 
 ---
 
-### Verifikasi Playbook
----
-
 
