@@ -25,4 +25,23 @@ Tasks :
     -  Buat dokumentasi tentang rumus `promql` yang kalian gunakan
 ```
 
-## 
+## 1. Setup monitoring server.
+![Fotoscr](scr/Foto-0.png)  
+![Fotoscr](scr/Foto-1.png)  
+![Fotoscr](scr/Foto-2.png)   
+
+## 2. Setup Reverse Proxy untuk aplikasi monitoring nya.
+    - exporter-$name.studentdumbways.my.id (node exporter)
+    - prom-$name.studentdumbways.my.id (prometheus)
+    - monitoring-$name.studentdumbways.my.id (grafana)
+![Fotoscr](scr/Foto-3.png)   
+
+## 3. Dengan Grafana, buatlah :
+    -  Dashboard untuk monitor resource server (CPU, RAM & Disk Usage)  buatlah se freestyle kalian.
+![Fotoscr](scr/Foto-4.png)  
+![Fotoscr](scr/Foto-5.png)  
+![Fotoscr](scr/Foto-6.png)   
+    -  Buat dokumentasi tentang rumus `promql` yang kalian gunakan
+![Fotoscr](scr/Foto-7.png)   
+
+
