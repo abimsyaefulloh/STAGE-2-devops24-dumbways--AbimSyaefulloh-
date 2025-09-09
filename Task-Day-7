@@ -33,15 +33,36 @@ Tasks :
 ## 2. Setup Reverse Proxy untuk aplikasi monitoring nya.
     - exporter-$name.studentdumbways.my.id (node exporter)
     - prom-$name.studentdumbways.my.id (prometheus)
-    - monitoring-$name.studentdumbways.my.id (grafana)
+    - monitoring-$name.studentdumbways.my.id (grafana)    
 ![Fotoscr](scr/Foto-3.png)   
 
 ## 3. Dengan Grafana, buatlah :
     -  Dashboard untuk monitor resource server (CPU, RAM & Disk Usage)  buatlah se freestyle kalian.
 ![Fotoscr](scr/Foto-4.png)  
+```bash
+saya membuat monitor resource untuk CPU, RAM & Disk Usage, dengan :
+- CPU terpakai 2.0%
+- RAM terpakai 38.6%
+- Disk Free nya 52.3 GB
+```
+Atau kita bisa meng copy ID untuk Import dashboard template ke dashboard kita, dari link dibawah  
+`https://grafana.com/grafana/dashboards/1860-node-exporter-full/`  
+Dan tampilannya akan seperti ini.  
 ![Fotoscr](scr/Foto-5.png)  
-![Fotoscr](scr/Foto-6.png)   
     -  Buat dokumentasi tentang rumus `promql` yang kalian gunakan
+![Fotoscr](scr/Foto-6.png)   
+CPU usage, dengan output percent
+```bash
+100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle",instance="exporter-abim22.studentdumbways.my.id"}[5m])) * 100)
+```
 ![Fotoscr](scr/Foto-7.png)   
-
-
+RAM usage, dengan output percent
+```bash
+(node_memory_MemTotal_bytes{instance="exporter-abim22.studentdumbways.my.id"} - node_memory_MemAvailable_bytes{instance="exporter-abim22.studentdumbways.my.id"}) 
+/ node_memory_MemTotal_bytes{instance="exporter-abim22.studentdumbways.my.id"} * 100
+```
+![Fotoscr](scr/Foto-8.png)
+dan Free Disk, dengan output GB
+```bash
+node_filesystem_free_bytes{fstype!="tmpfs",instance="exporter-abim22.studentdumbways.my.id"} / 1024^3
+```
