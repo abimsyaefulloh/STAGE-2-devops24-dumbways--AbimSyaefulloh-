@@ -26,14 +26,18 @@ Tasks :
 ```
 
 ## 1. Setup monitoring server.
+setup Grafana
 ![Fotoscr](scr/Foto-0.png)  
+setup node exporternya
 ![Fotoscr](scr/Foto-1.png)  
+setup prometheus
 ![Fotoscr](scr/Foto-2.png)   
 
 ## 2. Setup Reverse Proxy untuk aplikasi monitoring nya.
     - exporter-$name.studentdumbways.my.id (node exporter)
     - prom-$name.studentdumbways.my.id (prometheus)
     - monitoring-$name.studentdumbways.my.id (grafana)    
+Disini saya menggunakan certbot SSL dan sudah bisa terbuka menggunakan HTTPS
 ![Fotoscr](scr/Foto-3.png)   
 
 ## 3. Dengan Grafana, buatlah :
